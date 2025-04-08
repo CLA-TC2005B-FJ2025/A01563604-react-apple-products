@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 
+import './AppleProduct.css'
+
 import iphone from './svg/iphone.svg'
 import ipad from './svg/ipad.svg'
 import watch from './svg/watch.svg'
@@ -20,10 +22,10 @@ export function AppleProduct( props ) {
   }
 
   return (
-    <div onClick={(manejarClick)}>
+    <div onClick={(manejarClick)} className='apple-product'>
       Producto {props.type} lleva {clicks} clicks
-      <img alt="producto" src={mapaSVG[props.type]} width={200} />
-      <img alt="heart" src={heart} style={{ width:10+10*clicks + 'px'}} />
+      <img alt="producto" src={mapaSVG[props.type]} width={200} className='product'/>
+      <img alt="heart" src={heart} style={{ width:10+10*clicks + 'px'}} className='heart'/>
     </div>
   )
 }
