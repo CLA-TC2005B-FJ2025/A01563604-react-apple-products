@@ -23,6 +23,7 @@ export function AppleProduct( props ) {
     <div onClick={(manejarClick)}>
       Producto {props.type} lleva {clicks} clicks
       <img alt="producto" src={mapaSVG[props.type]} width={200} />
+      <img alt="heart" src={heart} style={{ width:10+10*clicks + 'px'}} />
     </div>
   )
 }
